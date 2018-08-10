@@ -15,7 +15,23 @@ class BooksApp extends Component {
 	})
   }
   
-  moveBook = () => {}
+  moveBook = (event, id) => {
+	let books = this.state.books.filter((book) => book.id === id)
+    let shelf = event.target.value
+
+    BooksAPI.update(books[0], shelf).then(() => {
+		this.showBookOnNewShelf(id, shelf)
+    })
+  }
+
+  showBookOnNewShelf = (id, shelf) => {
+	let currentBook = this.state.books.filter((book) => book.id === id)
+    currentBook[0].shelf = shelf
+
+    let updatedBooks = this.state.books.filter((book) => book.id !== id).concat(currentBook)
+
+    this.setState({updatedBooks})
+  }
 
   render() {
 	// Get currently reading books
