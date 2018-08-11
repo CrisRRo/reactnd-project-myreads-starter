@@ -26,8 +26,8 @@ class BookShelf extends Component {
 							{books.map((book) => (
 								<li key={book.id}>
 									<div className="book">
-									  <div className="book-top">
-										<div className="book-cover" style={{ width: 128, height: 193, backgroundImage:`url(${book.imageLinks.thumbnail})` }}></div>
+									  <div className="book-top">	
+										<div className="book-cover" style={{ height: 192, width: 128, backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: ''})` }}></div>
 										<div className="book-shelf-changer">
 										  <select defaultValue={book.shelf} onChange={(e) => {
                                             onMoveBook(e, book.id)
