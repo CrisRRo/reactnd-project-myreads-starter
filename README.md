@@ -1,10 +1,10 @@
 # MyReads Project for Nanodegree
 
-## Contents
-* [Project Description] (#project_description)
-* [How to Use] (#how_to_use)
-* [References] (#references)
-* [Contributing] (#contributing)
+## Table of Contents
+* [Project Description](#project_description)
+* [How to Use](#how_to_use)
+* [References](#references)
+* [Contributing](#contributing)
 
 ## Project Description
 
